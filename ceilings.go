@@ -24,8 +24,8 @@ package policy
 import (
 	"fmt"
 
-	"github.com/agent-harness/contracts/gen/agentharness/v1"
-	"github.com/agent-harness/taint"
+	"github.com/dan-gillis-ai/contracts/gen/agentharness/v1"
+	"github.com/dan-gillis-ai/taint"
 )
 
 // Class is the effect class of a capability, from the device's point of view.

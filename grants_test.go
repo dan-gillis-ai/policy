@@ -3,7 +3,7 @@ package policy
 import (
 	"testing"
 
-	"github.com/agent-harness/contracts/gen/agentharness/v1"
+	"github.com/dan-gillis-ai/contracts/gen/agentharness/v1"
 )
 
 func testClaims() *agentharnessv1.RunTokenClaims {

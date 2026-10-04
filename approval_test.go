@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/agent-harness/contracts/gen/agentharness/v1"
-	"github.com/agent-harness/taint"
+	"github.com/dan-gillis-ai/contracts/gen/agentharness/v1"
+	"github.com/dan-gillis-ai/taint"
 )
 
 // TestWebContentCannotReachAShell is THE invariant of the taint system:

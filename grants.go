@@ -3,7 +3,7 @@ package policy
 import (
 	"fmt"
 
-	"github.com/agent-harness/contracts/gen/agentharness/v1"
+	"github.com/dan-gillis-ai/contracts/gen/agentharness/v1"
 )
 
 // Approval modes carried in RunTokenClaims.approval_mode. "never" means the
