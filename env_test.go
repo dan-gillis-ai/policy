@@ -7,20 +7,20 @@ import (
 
 func TestFilterEnvDropsCredentials(t *testing.T) {
 	in := map[string]string{
-		"PATH":                    "/usr/bin:/bin",
-		"HOME":                    "/Users/me",
-		"LANG":                    "en_US.UTF-8",
-		"TZ":                      "UTC",
-		"TERM":                    "xterm-256color",
-		"SSH_AUTH_SOCK":           "/private/tmp/com.apple.launchd/listeners",
-		"AWS_SECRET_ACCESS_KEY":   "topsecret",
-		"AWS_ACCESS_KEY_ID":       "AKIA...",
-		"AZURE_CLIENT_SECRET":     "topsecret",
+		"PATH":                           "/usr/bin:/bin",
+		"HOME":                           "/Users/me",
+		"LANG":                           "en_US.UTF-8",
+		"TZ":                             "UTC",
+		"TERM":                           "xterm-256color",
+		"SSH_AUTH_SOCK":                  "/private/tmp/com.apple.launchd/listeners",
+		"AWS_SECRET_ACCESS_KEY":          "topsecret",
+		"AWS_ACCESS_KEY_ID":              "AKIA...",
+		"AZURE_CLIENT_SECRET":            "topsecret",
 		"GOOGLE_APPLICATION_CREDENTIALS": "/secrets.json",
-		"ANTHROPIC_API_KEY":       "sk-...",
-		"OPENAI_API_KEY":          "sk-...",
-		"GITHUB_TOKEN":            "ghp_...",
-		"SOMETHING_RANDOM":        "leak-me",
+		"ANTHROPIC_API_KEY":              "sk-...",
+		"OPENAI_API_KEY":                 "sk-...",
+		"GITHUB_TOKEN":                   "ghp_...",
+		"SOMETHING_RANDOM":               "leak-me",
 	}
 	out := FilterEnv(in)
 	for _, k := range BaseEnvKeys {

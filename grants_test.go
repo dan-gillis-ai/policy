@@ -8,8 +8,8 @@ import (
 
 func testClaims() *agentharnessv1.RunTokenClaims {
 	return &agentharnessv1.RunTokenClaims{
-		RunId:     "run-1",
-		TenantId:  "acme",
+		RunId:       "run-1",
+		TenantId:    "acme",
 		GraphDigest: "sha256:abcd",
 		Capabilities: []agentharnessv1.Capability{
 			agentharnessv1.Capability_CAPABILITY_FS_READ,
@@ -60,7 +60,7 @@ func TestGrantSetEmptyCapsGrantNothing(t *testing.T) {
 		t.Fatal(err)
 	}
 	for cap := range map[agentharnessv1.Capability]bool{
-		agentharnessv1.Capability_CAPABILITY_FS_READ: true,
+		agentharnessv1.Capability_CAPABILITY_FS_READ:   true,
 		agentharnessv1.Capability_CAPABILITY_SHELL_RUN: true,
 	} {
 		if g.Allows(cap) {

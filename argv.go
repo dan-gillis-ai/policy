@@ -44,14 +44,14 @@ func DefaultArgvRules() map[string]ArgvRule {
 			MaxArgs:        10,
 			ForbiddenFlags: []string{"-c"}, // -c is a shell in disguise
 		},
-		"uv":     {MaxArgs: 20, Subcommands: []string{"run", "sync", "pytest", "pip"}},
-		"npm":    {MaxArgs: 20, Subcommands: []string{"test", "run", "ci", "install"}},
-		"make":   {MaxArgs: 8, CwdRequired: true},
-		"go":     {MaxArgs: 12, Subcommands: []string{"build", "test", "vet", "fmt"}},
-		"grep":   {MaxArgs: 12},
-		"rg":     {MaxArgs: 12},
-		"ls":     {MaxArgs: 8},
-		"cat":    {MaxArgs: 12},
+		"uv":   {MaxArgs: 20, Subcommands: []string{"run", "sync", "pytest", "pip"}},
+		"npm":  {MaxArgs: 20, Subcommands: []string{"test", "run", "ci", "install"}},
+		"make": {MaxArgs: 8, CwdRequired: true},
+		"go":   {MaxArgs: 12, Subcommands: []string{"build", "test", "vet", "fmt"}},
+		"grep": {MaxArgs: 12},
+		"rg":   {MaxArgs: 12},
+		"ls":   {MaxArgs: 8},
+		"cat":  {MaxArgs: 12},
 
 		// Shells are denied entirely. No exception, ever.
 		"sh":   {Denied: true},

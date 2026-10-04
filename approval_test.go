@@ -63,9 +63,9 @@ func TestDecideReadOnlyAlwaysAllows(t *testing.T) {
 
 func TestDecideMutatingSemi(t *testing.T) {
 	cases := []struct {
-		mode  string
-		in    taint.Level
-		want  Decision
+		mode string
+		in   taint.Level
+		want Decision
 	}{
 		{"auto", taint.Trusted, DecisionAllow},
 		{"auto", taint.Semi, DecisionAllow},
